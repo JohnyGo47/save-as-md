@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Save as MD",
+  "version": "0.2.0",
+  "description": "Save AI responses as Markdown. Adds a Save-as-MD button next to Copy, and lets you save any selected text on any site.",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["vendor/turndown.js", "vendor/turndown-plugin-gfm.js", "src/adapters.js", "src/content.js"],
+      "css": ["src/button.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": []
+}

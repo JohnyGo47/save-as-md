@@ -1,0 +1,7 @@
+# Normalise line endings: LF in the repo, native in the working tree.
+# Authored on Windows, so without this the first clone on macOS/Linux shows
+# every file as modified.
+* text=auto eol=lf
+
+# Binary assets — never touch these.
+*.png binary
