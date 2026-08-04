@@ -8,9 +8,11 @@ Two ways to use it:
 - **Response button** — a folder "Save as MD" button next to the existing Copy
   button on AI chat responses (Claude, ChatGPT, Grok, Kimi, Qwen, and any other
   site whose Copy button the generic heuristic recognises).
-- **Selection popup** — highlight any text on any page and a "Save as MD"
-  popup appears at the start of the selection; click it to download just that
-  selection as Markdown.
+- **Selection popup** — select any text **on any website**, not just the AI
+  chat sites above — a "Save as MD" popup appears right at the start of the
+  highlight; click it to download just that selection as its own `.md` file.
+  This works everywhere because the extension runs on all `http(s)` pages;
+  see [Site access](#site-access).
 
 ## Install (unpacked, Chrome/Edge/Brave)
 
@@ -18,9 +20,13 @@ Two ways to use it:
 2. Go to `chrome://extensions` (or `edge://extensions`).
 3. Enable **Developer mode** (top right).
 4. Click **Load unpacked** and select this folder.
-5. Open any chat site, hover a response — a folder icon appears
-   directly to the right of Copy. Hovering it shows "Save as MD"; clicking it
-   downloads that response as a `.md` file. Or just select text anywhere.
+5. Two things to try:
+   - On a chat site, hover a response — a folder icon appears directly to the
+     right of Copy. Hovering it shows "Save as MD"; clicking it downloads that
+     response as a `.md` file.
+   - On **any** page — this README on GitHub, a Wikipedia article, an email —
+     select some text. A "Save as MD" popup appears at the start of the
+     selection; click it to download just that text as Markdown.
 
 ### Site access
 
