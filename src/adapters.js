@@ -28,7 +28,13 @@
         console.warn(LOG + ' invalid selector dropped in ' + label + ': ' + s);
       }
     }
-    if (!valid.length) console.warn(LOG + ' no valid selectors left in ' + label);
+    // An empty INPUT (e.g. the generic adapter's intentionally-empty
+    // containerSelectors, which relies on findMessageContainerGeneric
+    // instead) is not a failure - only warn when selectors were actually
+    // supplied and every one of them turned out to be invalid.
+    if (selectors.length && !valid.length) {
+      console.warn(LOG + ' no valid selectors left in ' + label);
+    }
     return valid.join(',');
   }
 
